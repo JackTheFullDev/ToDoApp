@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+      integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <section class="pictures-container">
+      <img
+        class="pictures"
+        src="/images/bg-desktop-dark.jpg"
+        alt="dektop-dark-theme"
+      />
+    </section>
+
+    <section class="main-section">
+      <div class="head-section">
+        <div class="tittle"><h1>TODO</h1></div>
+        <div class="toggle-button-section">
+          <img id="toogle-btn" src="/images/icon-sun.svg" alt="icon" />
+        </div>
+      </div>
+      <div class="task-section">
+        <div class="create-task">
+          <div class="button-cheeck">
+            <button class="check-button" disabled></button>
+          </div>
+          <div class="input-create-task">
+            <!--form here-->
+            <input id="add-task" placeholder="Create a new todo..." />
+          </div>
+        </div>
+        <div class="task-list">
+          <div class="dynamic-div"></div>
+          <div class="footer-section">
+            <div class="info-section">
+              <p><span id="counter">0</span> items left</p>
+            </div>
+            <div class="info-section">
+              <a id="all-show" onclick="filter('all')">All</a>
+              <a id="active-show" onclick="filter('active')">Active</a>
+              <a id="complated-show" onclick="filter('completed')">Complated</a>
+            </div>
+            <div class="info-section">
+              <p id="clear-task">Clear Complated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      <div><p>Drag and dop to reorder list items left</p></div>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">JackTheFullDev</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

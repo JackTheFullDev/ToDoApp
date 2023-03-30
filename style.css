@@ -1,0 +1,214 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*Colors*/
+  /*Prime*/
+  --Bright--Blue: hsl(220, 98%, 61%);
+  --Check--Background: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  /*Light Theme*/
+  --Very--Light--Gray: hsl(0, 0%, 98%);
+  --Very--Light--Grayish--Blue: hsl(236, 33%, 92%);
+  --Light--Grayish--Blue: hsl(233, 11%, 84%);
+  --Dark--Grayish--Blue: hsl(236, 9%, 61%);
+  --Very--Dark--Grayish--Blue: hsl(235, 19%, 35%);
+  /*Dark Theme*/
+  --Very--Dark--Blue: hsl(235, 21%, 11%);
+  --Very--Dark--Desaturated--Blue: hsl(235, 24%, 19%);
+  --Light--Grayish--Blue: hsl(234, 39%, 85%);
+  --Light--Grayish--Blue--hover: hsl(236, 33%, 92%);
+  --Dar--Grayish--Blue: hsl(234, 11%, 52%);
+  --Very--Dark--Grayis--Blue: hsl(233, 14%, 35%);
+  --Very--Dark--Grayish--Blue: hsl(237, 14%, 26%);
+  /*Colors*/
+}
+body {
+  background-color: var(--Very--Dark--Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: var(--Light--Grayish--Blue);
+  transition: 0.3s ease-in-out;
+}
+.pictures-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  z-index: -1;
+}
+.pictures {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.main-section {
+  width: 100%;
+  max-width: 700px;
+}
+.head-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0px 35px 0px;
+}
+.toggle-button-section {
+  cursor: pointer;
+  height: 100%;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+.create-task {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--Very--Dark--Desaturated--Blue);
+}
+.check-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: var(--Dar--Grayish--Blue) 1px solid;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.check-button-active {
+  background: url("images/icon-check.svg") no-repeat center,
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.check-button:hover {
+  border: var(--Bright--Blue) 1px solid;
+}
+.input-create-task {
+  width: 100%;
+}
+#add-task {
+  border: none;
+  outline: none;
+  margin: 10px;
+  background-color: transparent;
+  width: 95%;
+  padding: 12px;
+  color: var(--Light--Grayish--Blue);
+  transition: 0.3s ease-in-out;
+}
+.task-list {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--Very--Dark--Desaturated--Blue);
+  box-shadow: 0px 0px 20px 3px rgb(23, 23, 24);
+}
+.task-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.button-with-desc {
+  display: flex;
+  align-items: center;
+}
+.description-task {
+  padding: 25px;
+}
+.description-task-checked {
+  color: var(--Dar--Grayish--Blue);
+  text-decoration: line-through;
+  
+}
+
+.display-task {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--Dark--Grayish--Blue);
+  cursor: pointer;
+  justify-content: space-between;
+  transition: 0.3s ease-in-out;
+}
+.display-task:hover {
+  transform: translateY(2px);
+  box-shadow: 0px 6px 10px 1px rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+  border: none;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  margin: 15px 0px 15px 0px;
+}
+.button-remove {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.footer-section p,
+a,
+span {
+  font-size: 16px;
+  color: var(--Dar--Grayish--Blue);
+}
+.footer-section a {
+  text-decoration: none;
+}
+.footer-section a:hover,
+#clear-task:hover {
+  color: var(--Light--Grayish--Blue--hover);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.task-list-light {
+  background-color: var(--Very--Light--Grayish--Blue);
+  transition: 0.3s ease-in-out;
+}
+.task-list-light p,
+span.light,
+a.light,
+p.light {
+  color: var(--Very--Dark--Grayish--Blue);
+  transition: 0.3s ease-in-out;
+}
+body.light {
+  background-color: var(--Very--Light--Gray);
+  transition: 0.3s ease-in-out;
+}
+body.light p,
+body.light span {
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+.create-task-light {
+  background-color: var(--Very--Light--Grayish--Blue);
+  transition: 0.3s ease-in-out;
+}
+.footer-section-light a:hover,
+.footer-section-light #clear-task:hover {
+  color: black;
+}
+
+.attribution {
+  margin-top: 20px;
+}
