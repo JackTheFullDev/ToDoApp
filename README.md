@@ -1,3 +1,6 @@
+Greate App that I created as my last challenge from FrontendMentor :
+Technology: (CRUD without U :) , Light/DarkTheme , external library (Sortablejs) , Css  cool-looking trick's
+
 # Frontend Mentor - Todo app
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
