@@ -35,7 +35,7 @@ function addTask(e) {
             </div>
         </div>
   `;
-    dynamicDiv.innerHTML += field; // dynamic fild- ALL 
+    dynamicDiv.innerHTML += field; // dynamic fild- ALL
     inputTask.value = "";
     howManyLeft++;
     counterTask.textContent = howManyLeft;
@@ -70,7 +70,6 @@ function complateTask(e) {
 }
 toogleThemeButton.addEventListener("click", lightTheme);
 
-
 /* const currentTheme = localStorage.getItem("theme") || "dark";
 document.querySelector("body").classList.add(currentTheme);
 if (currentTheme === "light") {
@@ -83,7 +82,7 @@ function lightTheme() {
   // body.style.backgroundColor="white";
   body.classList.toggle("light");
 
- // localStorage.setItem("theme", body.classList.contains("light") ? "light" : "dark"); // localStorage
+  // localStorage.setItem("theme", body.classList.contains("light") ? "light" : "dark"); // localStorage
 
   taskList.classList.toggle("task-list-light");
   createTask.classList.toggle("create-task-light");
@@ -116,17 +115,23 @@ function filter(filterType) {
   const tasks = dynamicDiv.children;
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
-    console.log(task) 
-    const isChecked = task.querySelector(".check-button").classList.contains("check-button-active");
+    console.log(task);
+    const isChecked = task
+      .querySelector(".check-button")
+      .classList.contains("check-button-active");
     switch (filterType) {
       case "all":
         task.style.display = "flex";
         break;
       case "active":
-        isChecked ? task.style.display = "none" : task.style.display = "flex";
+        isChecked
+          ? (task.style.display = "none")
+          : (task.style.display = "flex");
         break;
       case "completed":
-        isChecked ? task.style.display = "flex" : task.style.display = "none";
+        isChecked
+          ? (task.style.display = "flex")
+          : (task.style.display = "none");
         break;
       default:
         console.log("Invalid filter type.");
